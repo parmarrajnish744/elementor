@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellzy — Feel Better, Live Better | Wellness & Lifestyle Essentials</title>
+  <meta name="description" content="Discover premium massage devices, fitness accessories and lifestyle gadgets engineered to help you relax, recover and recharge.">
+  <link rel="stylesheet" href="custom-elementor.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+
+  <!-- 1. Topbar -->
+  <div class="topbar">
+    <div class="container-boxed flex-wrap-between">
+      <div class="topbar-items">
+        <span class="topbar-item"><span>🚚</span> Free Shipping on Orders Above ₹999</span>
+        <span class="topbar-item"><span>🛡️</span> Discreet Packaging</span>
+        <span class="topbar-item"><span>◉</span> 24/7 Customer Support</span>
+      </div>
+      <div class="topbar-items">
+        <span class="topbar-item">🇮🇳 INR (₹)</span>
+        <a href="#shop" class="topbar-item">Track Order</a>
+        <a href="#footer" class="topbar-item">Help</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Header / Navigation -->
+  <header class="site-header">
+    <div class="container-boxed header-inner">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <div class="logo-mark"></div>
+        <div class="logo-text">
+          <strong>Wellzy</strong>
+          <small>Feel Better, Live Better</small>
+        </div>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#benefits">About Us</a></li>
+          <li><a href="#newsletter">Offers</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search wellness products...">
+      </div>
+
+      <!-- Action Buttons (Wishlist, Cart) -->
+      <div class="header-actions">
+        <button class="action-btn" id="wishlistHeaderBtn" title="Wishlist">
+          <span>♡</span>
+          <span class="action-badge" id="wishlistCount">0</span>
+        </button>
+        <button class="action-btn" id="cartHeaderBtn" title="Shopping Cart">
+          <span>🛒</span>
+          <span class="action-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="hero-section">
+    <div class="container-boxed hero-grid">
+      <div class="hero-content">
+        <span class="hero-subtitle">RELAX • RECOVER • RECHARGE</span>
+        <h1 class="hero-title">Wellness Essentials<br>For <span>A Better You</span></h1>
+        <p class="hero-desc">Premium massage devices, fitness accessories and lifestyle gadgets designed to help you live a healthier, happier and refreshed life every day.</p>
+        <a href="#shop" class="btn-primary">Shop Now <span>→</span></a>
+
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <strong>🚚 Free Shipping</strong>
+            <span>Above ₹999</span>
+          </div>
+          <div class="hero-trust-item">
+            <strong>🛡️ Secure Payment</strong>
+            <span>100% Safe</span>
+          </div>
+          <div class="hero-trust-item">
+            <strong>📦 Easy Returns</strong>
+            <span>7 Days Hassle-Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Wellzy Lifestyle and Wellness">
+        </div>
+        <div class="floating-pill pill-1">
+          <span>✨</span>
+          <span>4.9 / 5.0 Top Rated</span>
+        </div>
+        <div class="floating-pill pill-2">
+          <span>🌿</span>
+          <span>100% Guaranteed Quality</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Categories Section -->
+  <section class="categories-section" id="categories">
+    <div class="container-boxed">
+      <div class="section-header">
+        <span class="section-tag">SHOP BY CATEGORY</span>
+        <h2 class="section-title">Browse Our Categories</h2>
+        <p class="section-desc">Find the perfect wellness product crafted for your daily physical and mental recovery.</p>
+      </div>
+
+      <div class="categories-grid">
+        <div class="category-card" onclick="filterByCategory('Massagers')">
+          <div class="category-circle">
+            <span class="emoji-icon">💆</span>
+          </div>
+          <div class="category-name">Massagers</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Hand Grippers')">
+          <div class="category-circle">
+            <span class="emoji-icon">✊</span>
+          </div>
+          <div class="category-name">Hand Grippers</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Keychain Lights')">
+          <div class="category-circle">
+            <span class="emoji-icon">🔦</span>
+          </div>
+          <div class="category-name">Keychain Lights</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Car Accessories')">
+          <div class="category-circle">
+            <span class="emoji-icon">🚗</span>
+          </div>
+          <div class="category-name">Car Accessories</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Fitness Tools')">
+          <div class="category-circle">
+            <span class="emoji-icon">🏋️</span>
+          </div>
+          <div class="category-name">Fitness Tools</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Wellness')">
+          <div class="category-circle" style="background: #eefaf3;">
+            <span class="emoji-icon">🌿</span>
+          </div>
+          <div class="category-name">Wellness</div>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('Offers')">
+          <div class="category-circle" style="background: #fff1fb;">
+            <span class="emoji-icon" style="color: #f24fae; font-weight: 800;">%</span>
+          </div>
+          <div class="category-name">Offers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Shop Area -->
+  <section class="shop-section" id="shop">
+    <div class="container-boxed shop-layout">
+      
+      <!-- Sidebar Filters -->
+      <aside class="sidebar">
+        <div class="filter-group">
+          <h3 class="filter-title">Product Categories</h3>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="All" checked onchange="toggleCategoryFilter(this)"> All Products</span>
+            <span class="count">(9)</span>
+          </label>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="Massagers" onchange="toggleCategoryFilter(this)"> Massagers</span>
+            <span class="count">(3)</span>
+          </label>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="Hand Grippers" onchange="toggleCategoryFilter(this)"> Hand Grippers</span>
+            <span class="count">(1)</span>
+          </label>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="Keychain Lights" onchange="toggleCategoryFilter(this)"> Keychain Lights</span>
+            <span class="count">(1)</span>
+          </label>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="Car Accessories" onchange="toggleCategoryFilter(this)"> Car Accessories</span>
+            <span class="count">(2)</span>
+          </label>
+          <label class="filter-checkbox">
+            <span><input type="checkbox" name="cat" value="Fitness Tools" onchange="toggleCategoryFilter(this)"> Fitness Tools</span>
+            <span class="count">(2)</span>
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">Price Range</h3>
+          <input type="range" class="price-range-slider" id="priceRange" min="300" max="3000" step="50" value="3000" oninput="updatePriceSlider(this.value)">
+          <div class="price-display">
+            <span>Up to: <b id="priceDisplayValue">₹3,000</b></span>
+            <span style="color:#8c90a2">Min: ₹300</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">Customer Rating</h3>
+          <div class="rating-filter" onclick="filterByRating(5)">
+            ★★★★★ <span>5.0 Stars</span>
+          </div>
+          <div class="rating-filter" onclick="filterByRating(4)">
+            ★★★★☆ <span>4.0 & Up</span>
+          </div>
+          <div class="rating-filter" onclick="filterByRating(0)">
+            <span>All Ratings</span>
+          </div>
+        </div>
+
+        <button class="btn-filter" onclick="resetFilters()">Reset All Filters</button>
+      </aside>
+
+      <!-- Main Shop Content -->
+      <main>
+        <div class="shop-toolbar">
+          <div>
+            <h2 class="shop-toolbar-title">Shop Products</h2>
+            <p style="color: #7b7f92; font-size: 14px;">Showing <span id="visibleCount">9</span> wellness & lifestyle products</p>
+          </div>
+          <div>
+            <select class="sort-select" id="sortSelect" onchange="handleSort(this.value)">
+              <option value="featured">Sort by: Featured</option>
+              <option value="latest" selected>Sort by: Latest</option>
+              <option value="price-asc">Sort by: Price Low to High</option>
+              <option value="price-desc">Sort by: Price High to Low</option>
+              <option value="rating">Sort by: Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Rendered dynamically by JavaScript -->
+        </div>
+
+        <!-- Lifestyle Promo Banner -->
+        <div class="lifestyle-banner">
+          <div>
+            <h3>Upgrade Your Lifestyle</h3>
+            <p>Premium ergonomic wellness gadgets designed for deep comfort and rapid physical recovery.</p>
+          </div>
+          <a href="#shop" class="btn-outline">Shop Best Deals →</a>
+        </div>
+      </main>
+
+    </div>
+  </section>
+
+  <!-- 6. Benefits Section -->
+  <section class="benefits-section" id="benefits">
+    <div class="container-boxed">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🚚</div>
+          <div>
+            <div class="benefit-title">Free Shipping</div>
+            <div class="benefit-desc">On orders above ₹999</div>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <div>
+            <div class="benefit-title">Secure Payment</div>
+            <div class="benefit-desc">100% Safe & Encrypted</div>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📦</div>
+          <div>
+            <div class="benefit-title">Easy Returns</div>
+            <div class="benefit-desc">7 Days Return Guarantee</div>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎧</div>
+          <div>
+            <div class="benefit-title">24/7 Support</div>
+            <div class="benefit-desc">Dedicated Care & Help</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Newsletter Section -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container-boxed newsletter-box">
+      <span class="section-tag">STAY UPDATED</span>
+      <h2 class="section-title">Subscribe to Our Newsletter</h2>
+      <p class="section-desc">Get the latest wellness tips, exclusive discounts and new product drops directly in your inbox.</p>
+      
+      <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 8. Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container-boxed footer-grid">
+      <div>
+        <a href="#" class="logo footer-logo">
+          <div class="logo-mark"></div>
+          <div class="logo-text">
+            <strong>Wellzy</strong>
+            <small>Feel Better, Live Better</small>
+          </div>
+        </a>
+        <p class="footer-desc">Premium wellness devices and lifestyle gear to help you recover faster, feel invigorated, and achieve peak daily vitality.</p>
+        <div class="footer-socials">
+          <span>●</span> <span>◎</span> <span>▶</span> <span>◉</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#benefits">About Us</a></li>
+          <li><a href="#newsletter">Offers</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Customer Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Return & Refund</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact Us</h4>
+        <div class="footer-contact-item">
+          <span>📍</span>
+          <span>123 Wellness Street, Connaught Place, New Delhi, India - 110001</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>✉</span>
+          <span>support@wellzy.in</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>☎</span>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>◷</span>
+          <span>Mon–Sat: 9:00 AM – 6:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-boxed footer-bottom">
+      <div>© 2026 Wellzy. All rights reserved.</div>
+      <div>Designed with ❤️ for a healthier, happier you.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <span id="toastIcon">🛒</span>
+    <span id="toastMessage">Item added to cart!</span>
+  </div>
+
+  <!-- Client-side Logic Script -->
+  <script>
+    const productsData = [
+      {
+        id: 1,
+        title: "Full Body Massager",
+        category: "Massagers",
+        price: 1499,
+        oldPrice: 2499,
+        discount: "40%",
+        image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=500&q=80",
+        tag: "Best Seller",
+        reviews: 128,
+        rating: 5
+      },
+      {
+        id: 2,
+        title: "Eagle Claw Gripper",
+        category: "Hand Grippers",
+        price: 799,
+        oldPrice: 1299,
+        discount: "38%",
+        image: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 89,
+        rating: 5
+      },
+      {
+        id: 3,
+        title: "LED Keychain Light",
+        category: "Keychain Lights",
+        price: 599,
+        oldPrice: 999,
+        discount: "40%",
+        image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 56,
+        rating: 5
+      },
+      {
+        id: 4,
+        title: "Car Cigarette Lighter & Charger",
+        category: "Car Accessories",
+        price: 449,
+        oldPrice: 699,
+        discount: "38%",
+        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 42,
+        rating: 4
+      },
+      {
+        id: 5,
+        title: "Resistance Bands Set",
+        category: "Fitness Tools",
+        price: 999,
+        oldPrice: 1499,
+        discount: "33%",
+        image: "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 64,
+        rating: 4
+      },
+      {
+        id: 6,
+        title: "Mini Deep Tissue Massager",
+        category: "Massagers",
+        price: 899,
+        oldPrice: 1399,
+        discount: "36%",
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 38,
+        rating: 4
+      },
+      {
+        id: 7,
+        title: "Muscle Massage Ball",
+        category: "Fitness Tools",
+        price: 399,
+        oldPrice: 599,
+        discount: "33%",
+        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 51,
+        rating: 4
+      },
+      {
+        id: 8,
+        title: "Premium Pro Massager",
+        category: "Massagers",
+        price: 1999,
+        oldPrice: 2999,
+        discount: "33%",
+        image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=500&q=80",
+        tag: "Popular",
+        reviews: 72,
+        rating: 5
+      },
+      {
+        id: 9,
+        title: "Multi-Port Car Accessory",
+        category: "Car Accessories",
+        price: 699,
+        oldPrice: 1099,
+        discount: "36%",
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80",
+        tag: null,
+        reviews: 27,
+        rating: 4
+      }
+    ];
+
+    let cart = [];
+    let wishlist = [];
+    let selectedCategory = "All";
+    let maxPrice = 3000;
+    let minRating = 0;
+    let searchQuery = "";
+    let sortOption = "latest";
+
+    function showToast(message, icon = "🛒") {
+      const toast = document.getElementById("toastNotice");
+      document.getElementById("toastMessage").innerText = message;
+      document.getElementById("toastIcon").innerText = icon;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2600);
+    }
+
+    function toggleWishlist(id, event) {
+      if (event) event.stopPropagation();
+      const index = wishlist.indexOf(id);
+      const product = productsData.find(p => p.id === id);
+      if (index > -1) {
+        wishlist.splice(index, 1);
+        showToast(`Removed "${product.title}" from wishlist`, "♡");
+      } else {
+        wishlist.push(id);
+        showToast(`Saved "${product.title}" to wishlist!`, "❤️");
+      }
+      document.getElementById("wishlistCount").innerText = wishlist.length;
+      renderProducts();
+    }
+
+    function addToCart(id, event) {
+      if (event) event.stopPropagation();
+      const product = productsData.find(p => p.id === id);
+      cart.push(product);
+      document.getElementById("cartCount").innerText = cart.length;
+      showToast(`Added "${product.title}" to your cart!`, "🛒");
+    }
+
+    function updatePriceSlider(val) {
+      maxPrice = parseInt(val);
+      document.getElementById("priceDisplayValue").innerText = "₹" + maxPrice.toLocaleString('en-IN');
+      renderProducts();
+    }
+
+    function filterByCategory(cat) {
+      selectedCategory = cat;
+      const checkboxes = document.querySelectorAll('input[name="cat"]');
+      checkboxes.forEach(cb => {
+        cb.checked = (cb.value === cat) || (cat === 'Offers' && cb.value === 'All');
+      });
+      const shopEl = document.getElementById("shop");
+      if (shopEl) shopEl.scrollIntoView({ behavior: "smooth" });
+      renderProducts();
+    }
+
+    function toggleCategoryFilter(cb) {
+      if (cb.value === "All") {
+        document.querySelectorAll('input[name="cat"]').forEach(c => {
+          if (c !== cb) c.checked = false;
+        });
+        selectedCategory = "All";
+      } else {
+        document.querySelector('input[name="cat"][value="All"]').checked = false;
+        selectedCategory = cb.checked ? cb.value : "All";
+      }
+      renderProducts();
+    }
+
+    function filterByRating(stars) {
+      minRating = stars;
+      renderProducts();
+      showToast(`Filtered by ${stars > 0 ? stars + '★ & Up' : 'All Ratings'}`, "⭐");
+    }
+
+    function resetFilters() {
+      selectedCategory = "All";
+      maxPrice = 3000;
+      minRating = 0;
+      searchQuery = "";
+      document.getElementById("priceRange").value = 3000;
+      document.getElementById("priceDisplayValue").innerText = "₹3,000";
+      document.getElementById("searchInput").value = "";
+      document.querySelectorAll('input[name="cat"]').forEach(c => {
+        c.checked = c.value === "All";
+      });
+      renderProducts();
+      showToast("Filters reset to default", "🔄");
+    }
+
+    function handleSort(val) {
+      sortOption = val;
+      renderProducts();
+    }
+
+    document.getElementById("searchInput").addEventListener("input", function(e) {
+      searchQuery = e.target.value.toLowerCase().trim();
+      renderProducts();
+    });
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const email = document.getElementById("newsletterEmail").value;
+      showToast(`Thanks for subscribing! Check your inbox soon.`, "✉️");
+      document.getElementById("newsletterEmail").value = "";
+    }
+
+    function renderProducts() {
+      const container = document.getElementById("productsGrid");
+      let filtered = productsData.filter(item => {
+        const matchesCategory = (selectedCategory === "All" || selectedCategory === "Offers") 
+          ? true 
+          : item.category === selectedCategory;
+        const matchesPrice = item.price <= maxPrice;
+        const matchesRating = item.rating >= minRating;
+        const matchesSearch = item.title.toLowerCase().includes(searchQuery) || item.category.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesPrice && matchesRating && matchesSearch;
+      });
+
+      if (sortOption === "price-asc") {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortOption === "price-desc") {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortOption === "rating") {
+        filtered.sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+      }
+
+      document.getElementById("visibleCount").innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 16px; border: 1px dashed #dcdbe5;">
+            <div style="font-size: 48px; margin-bottom: 12px;">🔍</div>
+            <h3 style="font-size: 20px; margin-bottom: 6px;">No products match your filters</h3>
+            <p style="color: #7b7f92; margin-bottom: 20px;">Try adjusting your price range, clearing search terms or selecting another category.</p>
+            <button onclick="resetFilters()" class="btn-primary" style="padding: 10px 24px;">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(product => {
+        const isWishlisted = wishlist.includes(product.id);
+        const starsHtml = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
+        const tagHtml = product.tag 
+          ? `<span class="product-tag ${product.tag === 'Popular' ? 'popular' : ''}">${product.tag}</span>` 
+          : '';
+
+        return `
+          <div class="product-card">
+            <div class="product-thumb">
+              ${tagHtml}
+              <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist(${product.id}, event)" title="Save to wishlist">
+                ${isWishlisted ? '❤️' : '♡'}
+              </button>
+              <img src="${product.image}" alt="${product.title}" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">${product.title}</h4>
+              <div class="product-rating">
+                <span>${starsHtml}</span>
+                <span class="count">(${product.reviews})</span>
+              </div>
+              <div class="product-pricing">
+                <span class="product-price">₹${product.price.toLocaleString('en-IN')}</span>
+                <span class="product-old-price">₹${product.oldPrice.toLocaleString('en-IN')}</span>
+                <span class="product-discount">${product.discount} OFF</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart(${product.id}, event)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>
